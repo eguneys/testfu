@@ -1,9 +1,9 @@
 {
-  "name": "testiz",
-  "version": "1.0.6",
+  "name": "testf",
+  "version": "1.0.0",
   "description": "simple testing library with no excessive syntax",
-  "main": "testutils.js",
-  "repository": "https://github.com/eguneys/testiz",
+  "main": "testf.js",
+  "repository": "https://github.com/eguneys/testf",
   "author": "eguneys",
   "license": "MIT",
   "scripts": {
@@ -11,9 +11,7 @@
     "compile": "babel src --out-dir ./",
     "prepublish": "yarn run compile"
   },
-  "dependencies": {
-    "chalk": "^2.4.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5"

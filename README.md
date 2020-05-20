@@ -3,28 +3,33 @@ Simple testing library with no excessive syntax.
 
 ### Install
 
-   yarn install testiz --dev
+   yarn add testf --dev
 
     
 ### Usage
 
     // node
-    // const { log, ok, is, not } = require('testiz');
+    // const chalk = require('chalk');
+    // const { testf } = require('./testf');
+    // const { nodeOptions } = require('./testf');
+    // const { log, is, array_is } = testf(nodeOptions(chalk));
+
 
     // browser
-    import { log, ok, is, not } from 'testiz/browser';
+    import { log, is, array_is } from 'testiz;
     
     
     function tests() {
       log('passing tests');
       ok('true is ok', true);
       is('three is three', 3, 3);
-      not('three is not four', 3, 4);
 
       log('failing tests');
       is('three is two', 3, 2);
       ok('null is ok', null);
+      array_is('not equal', [1,2], [2,3,4]);
+
     }
 
     tests();
-    # testiz
+    # testf
