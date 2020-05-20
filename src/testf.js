@@ -12,6 +12,29 @@ function testf({
   const array_is_matcher = (actual, expected) => {
     let messages = [];
 
+    for (let aa of actual) {
+      if (!expected.includes(aa)) {
+        messages.push(`Extra ` + JSON.stringify(aa));
+      }
+    }
+
+    for (let ee of expected) {
+      if (!actual.includes(ee)) {
+        messages.push(`Missing ` + JSON.stringify(ee));
+      }
+    }
+
+    if (messages.length > 0) {
+      messages.unshift(
+        notEqualMessage('!==', JSON.stringify(actual), JSON.stringify(expected)));
+    }
+
+    return fails(messages);
+  };
+
+  const object_is_matcher = (actual, expected) => {
+    let messages = [];
+
     for (let aI in actual) {
       if (actual[aI] !== expected[aI]) {
         messages.push(`Extra ` + JSON.stringify(actual[aI]));
@@ -60,10 +83,12 @@ function testf({
   const log = makeLogger();
   const is = makeTester(is_matcher);
   const array_is = makeTester(array_is_matcher);
+  const obj_is = makeTester(object_is_matcher);
 
   return {
     log,
     is,
+    obj_is,
     array_is,
     makeTester
   };
