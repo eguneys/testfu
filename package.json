@@ -1,11 +1,15 @@
 {
-  "name": "testf",
+  "name": "testfu",
   "version": "1.0.0",
   "description": "simple testing library with no excessive syntax",
   "main": "testf.js",
-  "repository": "https://github.com/eguneys/testf",
+  "repository": "https://github.com/eguneys/testfu",
   "author": "eguneys",
   "license": "MIT",
+  "keywords": [
+    "test",
+    "unit"
+  ],
   "scripts": {
     "test": "node ./src/tests.js",
     "compile": "babel src --out-dir ./",

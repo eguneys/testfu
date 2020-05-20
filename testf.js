@@ -102,7 +102,6 @@ const nodeOptions = chalk => ({
   }
 });
 
-module.exports = testf;
+module.exports = testf(browserOptions);
 module.exports.nodeOptions = nodeOptions;
-module.exports.testBrowser = testf(browserOptions);
 module.exports.testf = testf;

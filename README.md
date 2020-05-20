@@ -3,7 +3,7 @@ Simple testing library with no excessive syntax.
 
 ### Install
 
-   yarn add testf --dev
+   yarn add testfu --dev
 
     
 ### Usage
